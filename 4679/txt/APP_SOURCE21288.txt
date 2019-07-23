@@ -1,0 +1,151 @@
+[,{
+  "query": " DELETE FROM QRY_INFO WHERE WFTPA_ID=? AND APP_ID=?",
+  "params": [
+    "WFT_IBS_P_1304_1559892263325_0",
+    "200"
+  ],
+  "key": "200~WFT_IBS_P_1304_1559892263325_0",
+  "target": "QRY_INFO",
+  "qry_type": "D"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1559892263325_0",
+    "DS_1561963699644",
+    "M",
+    "S",
+    " SELECT ibs_t_facility_trn_id,ibs_t_frps_id, transaction_tag, dr_amount, dr_paid_amount, cr_amount, cr_paid_amount, ibs_t_account_no, dr_cr_flag FROM ( SELECT ft.ibs_t_facility_trn_id, frs.ibs_t_frps_id, ft.transaction_tag, ft.dr_amount, ft.dr_paid_amount, ft.cr_amount, ft.cr_paid_amount, ft.ibs_t_account_no, ft.dr_cr_flag FROM ibs_t_facility_trn ft inner join ibs_t_facility_rpay_shed frs on frs.ibs_t_frps_id = ft.reference_id and frs.status='PENDING' WHERE ft.status = 'APPROVED'  $AND) VW ORDER BY ibs_t_facility_trn_id LIMIT 0",
+    "200",
+    "1",
+    "E_1561963501455",
+    "DT_1304_1555676378919",
+    "DTT_1304_1561708993529",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1559892263325_0~E_1561963501455~DT_1304_1555676378919~DTT_1304_1561708993529~DS_1561963699644~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1559892263325_0",
+    "DS_1561963724439",
+    "M",
+    "S",
+    " SELECT ibs_t_facility_trn_id,ibs_t_frps_id, transaction_tag, dr_amount, dr_paid_amount, cr_amount, cr_paid_amount, ibs_t_account_no, dr_cr_flag FROM ( SELECT ft.ibs_t_facility_trn_id, frs.ibs_t_frps_id, ft.transaction_tag, ft.dr_amount, ft.dr_paid_amount, ft.cr_amount, ft.cr_paid_amount, ft.ibs_t_account_no, ft.dr_cr_flag FROM ibs_t_facility_trn ft inner join ibs_t_facility_rpay_shed frs on frs.ibs_t_frps_id = ft.reference_id and frs.status='PENDING' WHERE ft.status = 'APPROVED'  $AND) VW ORDER BY ibs_t_facility_trn_id LIMIT 0",
+    "200",
+    "1",
+    "E_1561963309122",
+    "DT_1304_1555676378919",
+    "DTT_1304_1561708993529",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1559892263325_0~E_1561963309122~DT_1304_1555676378919~DTT_1304_1561708993529~DS_1561963724439~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1559892263325_0",
+    "DS_1559892536122",
+    "M",
+    "S",
+    " SELECT itt_id,         trn_id,         trn_sl_no,         trn_date,         trn_mode,         gl_account,         value_date,         systems_id,         acct_num,         our_bank_code,        instrument_type,         instrument_date,         instrument_num,         sort_code,         payee_account_no,         payor_account_no,         ifsc,         bic,         print_indicator,        reversal_date,         entered_by,         entered_date,         verified_by,         verified_date,         posted_by,         posted_date,         posted_flag,         created_by,         created_by_name,         created_date,         modified_by,         modified_by_name,         modified_date,         system_id,         system_name,         prct_id,         created_by_sts_id,         modified_by_sts_id,         status,         process_status,         dt_code,         dt_description,         dtt_code,         dtt_description,         version_no,         payee_name,         payor_name,         reference_number,         particulars,         rate_code,         rate_value,        cust_code,         same_currency,          other_bank_name,         base_ccy,         debit_base_amount,         credit_base_amount,         debit_target_amount,         credit_target_amount,         target_ccy,         account_category,         crdr  FROM   (SELECT itt.itt_id,                 itt.trn_id,                 itt.trn_sl_no,                 itt.trn_date,                 itt.trn_mode,                 itt.gl_account,                 itt.value_date,                 itt.systems_id,                 itt.acct_num,                 itt.our_bank_code,                itt.instrument_type,                 itt.instrument_date,                 itt.instrument_num,                 itt.sort_code,                 itt.payee_account_no,                 itt.payor_account_no,                 itt.ifsc,                 itt.bic,                 itt.print_indicator,                itt.reversal_date,                 itt.entered_by,                 itt.entered_date,                 itt.verified_by,                 itt.verified_date,                 itt.posted_by,                 itt.posted_date,                 itt.posted_flag,                 itt.created_by,                 itt.created_by_name,                 itt.created_date,                 itt.modified_by,                 itt.modified_by_name,                 itt.modified_date,                 itt.system_id,                 itt.system_name,                 itt.prct_id,                 itt.created_by_sts_id,                 itt.modified_by_sts_id,                 itt.status,                 itt.process_status,                 itt.dt_code,                 itt.dt_description,                 itt.dtt_code,                 itt.dtt_description,                 itt.version_no,                itt.payee_name,                 itt.payor_name,                 itt.reference_number,                 itt.particulars,                itt.rate_code,                 itt.rate_value,                itt.cust_code,                 itt.same_currency,                itt.other_bank_name,                itt.base_ccy,                 itt.debit_base_amount,                 itt.credit_base_amount,                 itt.debit_target_amount,                 itt.credit_target_amount,                 itt.target_ccy,                 itt.account_category,                 itt.crdr          FROM   ibs_t_transactions itt                 )VW LIMIT 0",
+    "200",
+    "1",
+    "E_1557471015798",
+    "DT_1304_1555053454727",
+    "DTT_1304_1559730479676",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1559892263325_0~E_1557471015798~DT_1304_1555053454727~DTT_1304_1559730479676~DS_1559892536122~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1559892263325_0",
+    "DS_1563196834956",
+    "M",
+    "S",
+    " SELECT itt_id,    transaction_tag,        gl_account, crdr,        debit_base_amount,        credit_base_amount,                payment_category   FROM (SELECT trn.itt_id,          trn.transaction_tag,             trn.gl_account, crdr,         trn.debit_base_amount,        trn.credit_base_amount,                 trn.payment_category   FROM ibs_t_transactions trn )VW LIMIT  0",
+    "200",
+    "1",
+    "E_1563194878859",
+    "DT_1304_1555053454727",
+    "DTT_1304_1559730479676",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1559892263325_0~E_1563194878859~DT_1304_1555053454727~DTT_1304_1559730479676~DS_1563196834956~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+},{
+  "query": " DELETE FROM QRY_INFO WHERE WFTPA_ID=? AND APP_ID=?",
+  "params": [
+    "WFT_IBS_P_1304_1563187728089_0",
+    "200"
+  ],
+  "key": "200~WFT_IBS_P_1304_1563187728089_0",
+  "target": "QRY_INFO",
+  "qry_type": "D"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1563187728089_0",
+    "DS_1563363061864",
+    "M",
+    "S",
+    " SELECT ibs_t_facility_trn_id,         ibs_t_facility_id,         ibs_t_account_no,         trn_source,         trn_type,         txn_no,         trn_date,         value_date,         transaction_tag,         payment_type,         currency,         dr_cr_flag,         dr_amount,         cr_amount,         dr_paid_amount,         cr_paid_amount,         reference_id,         gl_trn_id,         created_by,         created_by_name,         created_date,         modified_by,         modified_by_name,         modified_date,         system_id,         system_name,         prct_id,         created_by_sts_id,         modified_by_sts_id,         status,         process_status,         dt_code,         dt_description,         dtt_code,         dtt_description,         version_no,         gl_account,         vat_percent,         particulars,         customer_id,         account_name,         account_currency,         account_status,         mode_of_opr,         available_balance  FROM (SELECT itft.ibs_t_facility_trn_id,         itft.ibs_t_facility_id,         itft.ibs_t_account_no,         itft.trn_source,         itft.trn_type,         itft.txn_no,         itft.trn_date,         itft.value_date,         itft.transaction_tag,         itft.payment_type,         itft.currency,        itft. dr_cr_flag,         itft.dr_amount,         itft.cr_amount,         itft.dr_paid_amount,         itft.cr_paid_amount,         itft.reference_id,         itft.gl_trn_id,         itft.created_by,         itft.created_by_name,         itft.created_date,         itft.modified_by,         itft.modified_by_name,         itft.modified_date,         itft.system_id,         itft.system_name,         itft.prct_id,         itft.created_by_sts_id,         itft.modified_by_sts_id,         itft.status,         itft.process_status,         itft.dt_code,         itft.dt_description,         itft.dtt_code,         itft.dtt_description,         itft.version_no,         itft.gl_account,         itft.vat_percent,         itft.particulars,         itft.customer_id,         itft.account_name,         itft.account_currency,         itft.account_status,         itft.mode_of_opr,         itft.available_balance  FROM   ibs_t_facility_trn itft)VW LIMIT 0",
+    "200",
+    "1",
+    "E_1563363024436",
+    "DT_1304_1555676378919",
+    "DTT_1304_1561708993529",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1563187728089_0~E_1563363024436~DT_1304_1555676378919~DTT_1304_1561708993529~DS_1563363061864~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+},{
+  "query": " INSERT INTO QRY_INFO (WFTPA_ID,DS_CODE,MAIN_QRY_MODE,MAIN_QRY_TYPE,MAIN_QRY_TEXT,APP_ID,SORT_ORDER,EVENT_CODE,DT_CODE,DTT_CODE,LISTING_MODE, LOCKING_MODE, LOCKING_PARAMETER,PROCESS,SETUP_JSON) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+  "params": [
+    "WFT_IBS_P_1304_1563187728089_0",
+    "DS_1563532817268",
+    "M",
+    "S",
+    " SELECT TTS_ID,IBS_T_ACCOUNT_NO,PRODUCT_TYPE,TRN_TYPE,DR_CR_FLAG,TRN_TAG_CODE,DEBIT_AMOUNT,CREDIT_AMOUNT,TRN_DATE,VALUE_DATE,SCHEDULEREFERENCENO,CREATED_BY,CREATED_BY_NAME,CREATED_BY_STS_ID,CREATED_DATE,DT_CODE,DT_DESCRIPTION,DTT_CODE,DTT_DESCRIPTION,MODIFIED_BY,MODIFIED_BY_NAME,MODIFIED_BY_STS_ID,MODIFIED_DATE,PRCT_ID,STATUS,PROCESS_STATUS,SYSTEM_ID,SYSTEM_NAME,'SELECTED' NODE_CATEGORY FROM(SELECT TTS.TTS_ID,TTS.IBS_T_ACCOUNT_NO,TTS.PRODUCT_TYPE,TTS.TRN_TYPE,TTS.DR_CR_FLAG,TTS.TRN_TAG_CODE,TTS.DEBIT_AMOUNT,TTS.CREDIT_AMOUNT,TTS.TRN_DATE,TTS.VALUE_DATE,TTS.SCHEDULEREFERENCENO,TTS.CREATED_BY,TTS.CREATED_BY_NAME,TTS.CREATED_BY_STS_ID,TTS.CREATED_DATE,TTS.DT_CODE,TTS.DT_DESCRIPTION,TTS.DTT_CODE,TTS.DTT_DESCRIPTION,TTS.MODIFIED_BY,TTS.MODIFIED_BY_NAME,TTS.MODIFIED_BY_STS_ID,TTS.MODIFIED_DATE,TTS.PRCT_ID,TTS.STATUS,TTS.PROCESS_STATUS,TTS.SYSTEM_ID,TTS.SYSTEM_NAME FROM IBS_T_TRN_SCHEDULE  TTS)T $WHERE order by SCHEDULEREFERENCENO ASC",
+    "200",
+    "1",
+    "E_1561801350142",
+    "DT_1304_1555676378919",
+    "DTT_1304_1563456128213",
+    "",
+    "",
+    "",
+    "WF_SELECT",
+    "{}"
+  ],
+  "key": "200~WFT_IBS_P_1304_1563187728089_0~E_1561801350142~DT_1304_1555676378919~DTT_1304_1563456128213~DS_1563532817268~1",
+  "target": "QRY_INFO",
+  "qry_type": "I"
+}]
