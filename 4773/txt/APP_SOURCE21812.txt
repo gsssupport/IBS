@@ -1,0 +1,1 @@
+[{ "key": "200~ibs_cs_receipts", "target" : "APP_CCI_PROJECTS", "content" :"{ \"query\" : \"delete from app_cci_projects where app_id = ?  and project_name = ?;\", \"params\" : [$DQ$200$DQ$, $DQ$ibs_cs_receipts$DQ$] }", "qry_type" : "D"  }]
