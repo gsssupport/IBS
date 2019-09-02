@@ -1,0 +1,1 @@
+[{ "key": "200~425~0~NEWRPT_1567417563753~", "target" : "APP_RPT_DEFINITIONS_INFO", "content" :"{ \"query\" : \"delete from app_rpt_definitions_info where app_id=? and arptd_id=?\", \"params\" : [$DQ$200$DQ$, $DQ$425$DQ$, $DQ$0$DQ$, $DQ$NEWRPT_1567417563753$DQ$,$DQ$$DQ$] }", "qry_type" : "D"  }]
